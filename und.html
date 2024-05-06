@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supply Management System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="logo" alt="Logo.img"></a>
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href=""><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href=""></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href=""></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href=""></a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href=""></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>UPDATE</h1>
+    <form id="update-form" action="https://localhost/project/update.php" method="post">
+        <label for="update-section">Section:</label>
+        <select id="update-section" name="sections" required>
+            <option value="" disabled selected>Please Select a Section.</option>
+            <option value="ss">Supply Section</option>
+            <option value="um">University Material</option>
+            <option value="pps">Printer/Photocopies Section</option>
+            <option value="ls">Library Section</option>
+        </select>
+
+        <label for="item">Item_Name:</label>
+        <input type="text" id="item-name" name="item">
+
+        <label for="product.no">Product_Number:</label>
+        <input type="number" id="product_num" name="product_num" maxlength="10" required>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity">
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01">
+
+        <label for="date">Date_arrival</label>
+        <input type="date" id="date" name="date">
+
+        <label for="update-department">Department:</label>
+        <select id="update-department" name="department">
+            <option value="" disabled selected>Please Select a Department.</option>
+            <option value="CAS">CAS</option>
+            <option value="CAHS">CAHS</option>
+            <option value="CBA">CBA</option>
+            <option value="CCST">CCST</option>
+            <option value="CHK">CHK</option>
+            <option value="COA">COA</option>
+            <option value="COE">COE</option>
+            <option value="CTE">CTE</option>
+            <option value="CTHM">CTHM</option>
+            <option value="GRADUATE SCHOOL">GRADUATE SCHOOL</option>
+            <option value="ACADEMIC AFFAIR OFFICE">ACADEMIC AFFAIR OFFICE</option>
+            <option value="ADMISSION OFFICE">ADMISSION OFFICE</option>
+            <option value="CANTEEN">CANTEEN</option>
+            <option value="CLINIC">CLINIC</option>
+            <option value="DMST OFFICE">DMST OFFICE</option>
+            <option value="FINANCE OFFICE">FINANCE OFFICE</option>
+            <option value="GUIDANCE OFFICE">GUIDANCE OFFICE</option>
+            <option value="MIS OFFICE">MIS OFFICE</option>
+            <option value="NSTP OFFICE">NSTP OFFICE</option>
+            <option value="PRESIDENT'S OFFICE">PRESIDENT'S OFFICE</option>
+            <option value="REGISTRAR'S OFFICE">REGISTRAR'S OFFICE</option>
+            <option value="STUDENT AFFAIRS OFFICE">STUDENT AFFAIRS OFFICE</option>
+            <option value="VICE PRESIDENT'S OFFICE">VICE PRESIDENT'S OFFICE</option>
+        </select>
+
+        <p></p>
+
+        <div id="update-subjectField" style="display: none;">
+            <label for="subject">Subject (only for Library Section)</label>
+            <input type="text" id="subject" name="subject">
+        </div>
+
+        <button type="submit">CONFIRM</button>
+        <input type="hidden" name="submit" required>
+    </form>
+</div>
+
+<div class="container">
+    <h1>DELETE</h1>
+    <form id="delete-form" action="https://localhost/project/delete.php" method="post">
+        <label for="delete-section">Section:</label>
+        <select id="delete-section" name="sections" required>
+            <option value="" disabled selected>Please Select a Section.</option>
+            <option value="ss">Supply Section</option>
+            <option value="um">University Material</option>
+            <option value="pps">Printer/Photocopies Section</option>
+            <option value="ls">Library Section</option>
+        </select>
+
+        <label for="product.no">Product_Number:</label>
+        <input type="number" id="product_num" name="product_num" maxlength="10" required>
+
+        <label for="delete-department">Department:</label>
+        <select id="delete-department" name="department" required>
+            <option value="" disabled selected>Please Select a Department.</option>
+            <option value="CAS">CAS</option>
+            <option value="CAHS">CAHS</option>
+            <option value="CBA">CBA</option>
+            <option value="CCST">CCST</option>
+            <option value="CHK">CHK</option>
+            <option value="COA">COA</option>
+            <option value="COE">COE</option>
+            <option value="CTE">CTE</option>
+            <option value="CTHM">CTHM</option>
+            <option value="GRADUATE SCHOOL">GRADUATE SCHOOL</option>
+            <option value="ACADEMIC AFFAIR OFFICE">ACADEMIC AFFAIR OFFICE</option>
+            <option value="ADMISSION OFFICE">ADMISSION OFFICE</option>
+            <option value="CANTEEN">CANTEEN</option>
+            <option value="CLINIC">CLINIC</option>
+            <option value="DMST OFFICE">DMST OFFICE</option>
+            <option value="FINANCE OFFICE">FINANCE OFFICE</option>
+            <option value="GUIDANCE OFFICE">GUIDANCE OFFICE</option>
+            <option value="MIS OFFICE">MIS OFFICE</option>
+            <option value="NSTP OFFICE">NSTP OFFICE</option>
+            <option value="PRESIDENT'S OFFICE">PRESIDENT'S OFFICE</option>
+            <option value="REGISTRAR'S OFFICE">REGISTRAR'S OFFICE</option>
+            <option value="STUDENT AFFAIRS OFFICE">STUDENT AFFAIRS OFFICE</option>
+            <option value="VICE PRESIDENT'S OFFICE">VICE PRESIDENT'S OFFICE</option>
+        </select>
+
+        <p></p>
+
+        <div id="delete-subjectField" style="display: none;">
+            <label for="subject">Subject (only for Library Section)</label>
+            <input type="text" id="subject" name="subject">
+        </div>
+
+        <button type="submit">CONFIRM</button>
+        <input type="hidden" name="submit" required>
+    </form>
+</div>
+
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+    EXIT
+   </button>
+   
+   <div class="offcanvas offcanvas-start text-bg-dark" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+     <div class="offcanvas-header">
+       <h5 class="offcanvas-title" id="staticBackdropLabel">UPDATE/DELETE</h5>
+       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+     </div>
+     <div class="offcanvas-body">
+       <div>
+       </div>
+       <div class="dropdown mt-3">
+         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+           Dropdown button
+         </button>
+         <ul class="dropdown-menu">
+           <li><a class="dropdown-item" href="Supply Section.html">Go back</a></li>
+         </ul>
+       </div>
+     </div>
+   </div>
+
+<footer>
+    <div class="social-media" id="contacts">
+        <a href="https://www.facebook.com/09772873415KIRITO" target="_blank"><img src="https://img.icons8.com/?size=50&id=118467&format=png" alt="Facebook"></a>
+        <p>&copy; 2024 SUPPLY MANAGEMENT. All rights reserved.</p> 
+        <p>Contact us: supplymanagement15069@gmail.com</p>
+    </div>
+</footer>
+
+<script>
+    function toggleSubject(form, prefix) {
+        var section = form.querySelector("#" + prefix + "-section").value;
+        var subjectField = form.querySelector("#" + prefix + "-subjectField");
+
+        if (section === "ls") {
+            subjectField.style.display = "block";
+        } else {
+            subjectField.style.display = "none";
+        }
+    }
+
+    function toggleDepartment(selectElement, prefix) {
+        var section = selectElement.value;
+        var departmentSelect = document.getElementById(prefix + "-department");
+
+        if (section === "ls") {
+            departmentSelect.disabled = true;
+        } else {
+            departmentSelect.disabled = false;
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var updateForm = document.getElementById("update-form");
+        var deleteForm = document.getElementById("delete-form");
+
+        updateForm.addEventListener("change", function() {
+            toggleSubject(updateForm, "update");
+            toggleDepartment(updateForm.querySelector("#update-section"), "update");
+        });
+
+        deleteForm.addEventListener("change", function() {
+            toggleSubject(deleteForm, "delete");
+            toggleDepartment(deleteForm.querySelector("#delete-section"), "delete");
+        });
+    });
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
