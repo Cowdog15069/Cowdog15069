@@ -35,4 +35,17 @@ document.addEventListener('DOMContentLoaded', function() {
             alert("Please fill out both username and password fields to login.");
         }
     });
+}); 
+var showInfoButtons = document.querySelectorAll('.show-info-btn');
+
+showInfoButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    var profileInfo = this.nextElementSibling;
+    if (profileInfo.style.display === 'block') {
+      profileInfo.style.display = 'none';
+    } else {
+      profileInfo.style.display = 'block';
+    }
+  });
+
 });
