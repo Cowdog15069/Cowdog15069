@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <!-- for css offcanvas -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 <body>
-
+  <div class="fade-in">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="logo" alt="Logo.img"></a>
+    <a class="logo"></a>
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,27 +24,25 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="btn btn-dark nav-link" href="index.html"> <i class="fas fa-home"></i>
+                  Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="About.html">About us</a>
+                <a class="btn btn-dark nav-link" href="About.html"> <i class="bi bi-person-lines-fill"></i>
+                  About us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Supply Section.html">Supply Section</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href=""></a>
+                <a class="btn btn-dark nav-link" href="Supply Section.html"> <i class="bi bi-table"></i>
+                  Supply Section</a>
             </li>
         </ul>
     </div>
 </nav>
 
-      
-
+<div class="fade-in">
 <div class="container">
-    <h1>SUPPLIES SECTION</h1>
+    <h1><i class="bi bi-database-add"></i> SUPPLIES SECTION</h1>
+
     <form id="supply-form" action="https://localhost/project/supply.php" method="post">
       <label for="item">Item_Name:</label>
       <input type="text" id="item-name" name="item" required>
@@ -89,13 +89,15 @@
        
       <p></p>
 
-      <button type="submit">CONFIRM</button>
+      <button type="submit" class="btn btn-outline-success" > <i class="bi bi-box-arrow-in-right"></i>
+        CONFIRM</button>
       <input type="hidden" name="submit" required>
     </form>
   </div>
   
+  <div class="fade-in">
   <div class="container">
-    <h1>UNIVERSITY MATERIALS SECTION</h1>
+    <h1><i class="bi bi-database-add"></i> UNIVERSITY MATERIALS SECTION</h1>
     <form id="supply-form" action="https://localhost/project/umaterial.php" method="post">
       <label for="item">Item_Name:</label>
       <input type="text" id="item-name" name="item" required>
@@ -142,12 +144,14 @@
        
       <p></p>
   
-      <button type="submit">CONFIRM</button>
+      <button type="submit" class="btn btn-outline-success" > <i class="bi bi-box-arrow-in-right"></i>
+        CONFIRM</button>
     </form>
   </div>
   
+  <div class="fade-in">
   <div class="container">
-    <h1>PRINTERS/PHOTOCOPIER SECTION</h1>
+    <h1><i class="bi bi-database-add"></i> PRINTERS/<br>PHOTOCOPIER SECTION<br></h1>
     <form id="supply-form" action="https://localhost/project/psec.php" method="post">
       <label for="item">Item_Name:</label>
       <input type="text" id="item-name" name="item" required>
@@ -194,13 +198,14 @@
        
       <p></p>
   
-      <button type="submit">CONFIRM</button>
+      <button type="submit"class="btn btn-outline-success" > <i class="bi bi-box-arrow-in-right"></i>
+        CONFIRM</button>
     </form>
   </div>
   
-  <div class="container">
-    <p> <h1> 
-     LIBRARY SECTION </h1>  </p>
+  <div class="fade-in">
+  <div class="container" >
+    <p> <h1> <i class="bi bi-database-add"></i> LIBRARY SECTION </h1>  </p>
   
       <form id="supply-form" action="https://localhost/project/lsec.php" method="post">
   
@@ -222,38 +227,50 @@
         <label for="department">Subject</label>
         <input type="text" id="subject" name="subject" required>
   
-        <button type="submit">CONFIRM</button>
+        <button type="submit" class="btn btn-outline-success"> <i class="bi bi-box-arrow-in-right"></i>
+          CONFIRM</button>
     </form>
     </div>
-  </body>
+  </body> 
 
-  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-  UPDATE/DELETE/ALL DATA
+  <div class="container">
+  <div class="fade-in">
+  <button class="btn btn-success w-80 " type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+    <i class="bi bi-plus-circle"></i> <i class="bi bi-trash3-fill"></i> <i class="bi bi-database-fill"></i> UPDATE/DELETE/ALL DATA 
   </button>
-  
+  </div>
+  </div>
+
   <div class="offcanvas offcanvas-start text-bg-dark" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="staticBackdropLabel">UPDATE/DELETE/ALL DATA</h5>
+      <h5 class="offcanvas-title" id="staticBackdropLabel"> <i class="bi bi-card-list"></i>
+        UPDATE/DELETE/ALL DATA</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <div>
-      </div>
+      <div></div>
       <div class="dropdown mt-3">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-          Dropdown button
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="data.php">ALL DATA</a></li>
-          <li><a class="dropdown-item" href="und.html">Update/Delete Section</a></li>
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"> </button>
+        <ul class="dropdown-menu"> 
+          <li><a class="btn btn-success dropdown-item" href="data.php"> <i class="bi bi-database-fill"></i>
+            ALL DATA'S SECTION</a></li>
+          <li><a class="btn btn-success dropdown-item" href="und.html"> <i class="bi bi-plus-circle"></i> <i class="bi bi-trash3-fill"></i>
+           UPDATE/DELETE SECTION</a></li>
         </ul>
       </div>
     </div>
   </div>
-  
-  <footer>
-    <div class="social-media">
-      <p>&copy; 2024 SUPPLY MANAGEMENT. All rights reserved.</p> 
+
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="index.html" class="btn-light nav-link px-2 text-body-secondary"><i class="fas fa-home"></i> Home</a></li>
+          <li class="nav-item"><a href="Supply Section.html" class="btn-light nav-link px-2 text-body-secondary"><i class="bi bi-table"></i> Supply Section</a></li>
+          <li class="nav-item"><a href="About.html" class="btn-light nav-link px-2 text-body-secondary"><i class="bi bi-person-lines-fill"></i> About</a></li>
+          <li class="nav-item"><a href="https://www.facebook.com/PLSPOfficialFBPage" class="btn-light nav-link px-2 text-body-secondary"><i class="bi bi-facebook"></i> PLSP</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2024 Supply Management Company, Inc</p>
+      </footer>
     </div>
   </footer>
   <!-- Bootstrap JS -->
