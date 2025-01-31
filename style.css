@@ -14,14 +14,13 @@ body {
 
 .logo {
   align-items:center ;
-  width: 70px;
-  height: 50px;
+  width: 80px;
+  height: 70px;
   display: block;
   margin: 0 auto; 
   background-image: url('logo.png');
   background-size: cover;
-  background-repeat: round;
-  margin-right: 10px; 
+  background-repeat:round;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.719);
 }
 
@@ -32,21 +31,26 @@ h1 {
 }
 
 .container {
+  border: 2px solid rgb(12, 173, 12);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items from left to right */
+  margin-bottom: 20px;
   text-align: center;
-  text-shadow: #999797;
+  width: 50%; /* Adjust the width as needed */
   margin-top: 2%;
-  position: relative;
-  padding: 1px;
-  width: 70%; /* Adjust the width as needed */
-  margin: 20px auto; /* Center the container */
+  margin-bottom: 2%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.719);
-  background-color: #ffffffb7;
+  background-color: #131010b7;
 }
 
 .container form {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+
 }
 
 label {
@@ -63,20 +67,20 @@ select {
   border-radius: 5px;
   font-size: 16px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.678);
-  width: 100%; /* Make the input fields as wide as the container */
+  width: 100%; 
 }
 
 button {
   padding: 10px;
-  margin-top: 15px; /* Add space between the dropdown list and button */
-  margin-bottom: 15px; /* Add space between the button and the next form */
+  margin-top: 15px; 
+  margin-bottom: 15px; 
   border: none;
   background-color: #219252;
   color: #fff;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  width: 100%; /* Make the button as wide as the container */
+  width: 100%; 
 }
 
 button:hover {
@@ -109,26 +113,58 @@ button:hover {
   font-weight: bold;
 }
 
-.social-media {
-  margin-top: 20px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #e0e0e0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.678);
-}
-/* new */
-.c-item {
-  height: 180px;
-}
-.c-img {
-  height: 100%;
-  object-fit:cover;
-  filter: brightness(0.5);
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease-in forwards;
 }
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.678), 0 0 10px rgba(0, 0, 0, 0.719);
-  margin: 110px;
-  margin-top: 0%;
-  padding: 0%;
+@keyframes fadeInAnimation {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+.carousel-item img {
+  height: 350px; 
+  object-fit:fill; 
+}
+.carousel-caption h5,
+.carousel-caption p,
+.carousel-caption a {
+  color: rgb(255, 255, 255);
+ 
+}
+
+.nav-item a{
+  color: rgb(0, 0, 0);
+}
+.row img{
+  height: 300px; 
+  object-fit:fill; 
+}
+
+.custom-img {
+  width: 100%;
+  height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.order-md-1,
+.order-md-2 {
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .order-md-1 {
+    order: 2;
+  }
+
+  .order-md-2 {
+    order: 1;
+  }
 }

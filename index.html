@@ -5,120 +5,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supply Management System</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- for css -->
+    <!-- for css and icons -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
 
-
+  <div class="fade-in">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="logo" alt="Logo.img"></a>
+    <a class="logo" alt="supply manangement"> </a>
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+          <a class="btn btn-dark nav-link" href="index.html"> <i class="fas fa-home"></i>
+            Home <span class="sr-only">(current)</span></a>
+ 
+        <li class="nav-item">
+          <a class="btn btn-dark nav-link" href="About.html"> <i class="bi bi-person-lines-fill"></i>
+            About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="About.html">About us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Supply Section.html">Supply Section</a>
+          <a class="btn btn-dark nav-link" href="Supply Section.html"> <i class="bi bi-table"></i>
+            Supply Section</a>
         </li>
         
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link" href="login.html">Log Out</a>
+            <a class="btn btn-dark nav-link" href="log.html"> <i class="bi bi-person-fill-x"></i>
+              Log Out</a> 
         </li>
     </ul>
     </div>
   </nav>
-  
-<body>
-  <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
 
+  <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselIndicators" data-slide-to="2"></li>
+    </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active c-item">
-        <img src="https://business.amazon.in/assets/in/29th-march-2022/782_Website_creative_Supply_Chain_2880x960.jpg.transform/2880x960/image.jpg" class="d-block w-100 c-img" alt="Slide 1">
-        <div class="carousel-caption top-0 mt-4 d-none d-md-block">
-          <p class="text-uppercase text-capitalize h1">WELCOME MY FRIEND</p>
-          <p class="fw-bolder text-capitalize">Benefits of Supply Management System</p>
-       
-        </div>
+      <div class="carousel-item active">
+  
+          <img class="d-block w-100" src="https://www.storhub.com.sg/theme/images/articles/202104/5-ways-to-keep-your-valued-items-safe.jpg" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>WELCOME MY FRIEND</h5>
+            <p><h5>Our goal is here to help manage a supply within a Organization.</h5></p>
+            <a href="index.html" class="btn btn-success">Explore</a>
+          </div>
+          <div class="carousel-caption d-md-none">
+            <h5>WELCOME MY FRIEND</h5>
+            <p>Our goal is here to help manage a supply within a Organization.</p>
+            <a href="index.html" class="btn btn-success">Explore</a>
+          </div>
+        </a>
       </div>
-      <div class="carousel-item c-item">
-        <img src="https://softengine.com/wp-content/uploads/2020/09/supply-chain-graphic-cropped.png" class="d-block w-100 c-img" alt="Slide 2">
-        <div class="carousel-caption top-0 mt-4 d-none d-md-block">
-          <p class="text-uppercase text-capitalize h1">What do you think?</p>
-          <p class="fw-bolder text-capitalize">Feel free!!!</p>
+      <div class="carousel-item">
 
-        </div>
+          <img class="d-block w-100" src="https://www.cafworldwide.com/hs-fs/hubfs/Blog/What's%20the%20Difference%20Between%20Logistics%20and%20Supply%20Chain%20Management.jpg?width=3000&name=What%27s%20the%20Difference%20Between%20Logistics%20and%20Supply%20Chain%20Management.jpg" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Want to know us?</h5>
+            <p>What our goal and person behind this.</p>
+            <a href="About.html" class="btn btn-success">Learn about us</a>
+          </div>
+          <div class="carousel-caption d-md-none">
+            <h5>Want to know us?</h5>
+            <p>What our goal and person behind this.</p>
+            <a href="About.html" class="btn btn-success">Learn about us</a>
+          </div>
+        </a>
       </div>
-      <div class="carousel-item c-item">
-        <img src="https://www.projectmanager.com/wp-content/uploads/2019/06/190625_Blog_Feature_Change_Management.jpg" class="d-block w-100 c-img" alt="Slide 3">
-        <div class="carousel-caption top-0 mt-4 d-none d-md-block">
-          <p class="text-uppercase text-capitalize h1">ENJOY</p>
-          <p class="fw-bolder text-capitalize">Enjoy and sit tighty!</p>
-         
+      <div class="carousel-item">
+          <img class="d-block w-100" src="https://www.projectmanager.com/wp-content/uploads/2019/06/190625_Blog_Feature_Change_Management.jpg" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Check out the Supply Section's!</h5>
+            <p>Flexible. Can Add, delete and Update.</p>
+            <a href="Supply Section.html" class="btn btn-success">Proceed</a>
+          </div>
+          <div class="carousel-caption d-md-none">
+            <h5>Check out the Supply Section's!</h5>
+            <p>Flexible. Can Add, delete and Update.</p>
+            <a href="Supply Section.html" class="btn btn-success">Proceed</a>
+          </div>
+        </a>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 order-md-2">
+        <h1><i class="bi bi-stack-overflow"></i> 'Flow of Goods/Supply'</h1>
+        <p>Supply management plays a pivotal role in ensuring the seamless flow of goods and services within an organization. At its core, it encompasses the strategic coordination of sourcing, procurement, and distribution activities to meet the demands of customers while optimizing costs and maintaining quality standards. Effective supply management involves meticulous planning and execution across various stages of the supply chain, from identifying reliable suppliers to managing inventory levels and overseeing logistics operations.</p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <div class="text-center">
+          <img src="https://www.uclaextension.edu/sites/default/files/2018-04/supply-chain-analysis-and-compliance-mgmtx445-4.jpg" class="custom-img" alt="Placeholder Image">
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
-</body>
 
-<div class="container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>'Predicts' <i class="bi bi-bar-chart-steps"></i></h1>
+        <p>Another crucial aspect of supply management is demand forecasting, which involves predicting future demand for products or services based on historical data, market trends, and other relevant factors. Accurate demand forecasting enables organizations to optimize their inventory levels, minimize stockouts, and reduce excess inventory holding costs. Leveraging advanced analytics and forecasting models can help businesses anticipate demand fluctuations more effectively, thereby enabling them to allocate resources efficiently and enhance customer satisfaction by ensuring product availability.</p>
+      </div>
+      <div class="col-md-6">
+        <div class="text-center">
+          <img src="https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/323/323769/brain-activity-concept-illustration.jpg?w=1155&h=1541" class="custom-img" alt="Placeholder Image">
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <h1>WHAT IS SUPPLY MANAGEMENT</h1>
-  <p>Supply management involves collaboration and communication among various stakeholders, including suppliers, manufacturers, distributors, and retailers, and enhance customer satisfaction. Supply management plays a critical role in driving 
-    operational efficiency, reducing costs, mitigating risks, and enhancing competitiveness in today's global marketplace.</p>
-    Supply management, also known as procurement, plays a crucial role in the success of businesses across various industries. Here are some of the benefits of effective supply management:
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 order-md-2">
+        <h1><i class="bi bi-people"></i> 'Relationship'</h1>
+        <p>One of the primary objectives of supply management is to establish robust supplier relationships built on trust, transparency, and mutual benefit. By forging strategic partnerships with suppliers, organizations can gain access to innovative products, secure favorable pricing terms, and mitigate risks associated with supply chain disruptions. Furthermore, maintaining open lines of communication and collaborating closely with suppliers enable businesses to adapt quickly to changing market dynamics and customer preferences, thereby enhancing their competitiveness in the marketplace.</p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <div class="text-center">
+          <img src="https://mecaluxcom.cdnwm.com/blog/supply-chain-manager.1.0.jpg" class="custom-img" alt="Placeholder Image">
+        </div>
+      </div>
+    </div>
+  </div>
 
-<mark><br>(Cost Savings)</mark>: Efficient supply management helps in negotiating better prices with suppliers, optimizing inventory levels, and reducing procurement costs, 
-       leading to overall cost savings for the organization.<br>
-
-<mark><br>(Improved Quality)</mark>: By carefully selecting suppliers and ensuring adherence to quality standards, supply management contributes to improved product quality and reliability,
-       which can enhance customer satisfaction and loyalty.<br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>'Strategic' <i class="bi bi-globe"></i></h1>
+        <p>In today's increasingly interconnected and dynamic business environment, supply management is not merely a back-office function but a strategic imperative for driving growth and sustaining competitive advantage. By embracing digital technologies such as artificial intelligence, blockchain, and data analytics, organizations can enhance visibility and transparency across their supply chains, improve decision-making processes, and unlock new opportunities for innovation and value creation. Moreover, by adopting a proactive approach to supply management, businesses can mitigate risks, seize market opportunities, and enhance their resilience in the face of unforeseen disruptions, ensuring long-term sustainability and success.</p>
+      </div>
+      <div class="col-md-6">
+        <div class="text-center">
+          <img src="https://4.bp.blogspot.com/-xvVOzC9Cf08/WNKVLFwl9cI/AAAAAAAAF60/PTNy1Fio_0E-49g1WreE2AO_KcINujzSgCLcB/s1600/Supply%2BChain%2BManagement.jpg" class="custom-img" alt="Placeholder Image">
+        </div>
+      </div>
+    </div>
+  </div>
   
-<mark><br>(Risk Mitigation)</mark>: Effective supply management involves diversifying the supplier base, conducting risk assessments, and implementing contingency plans, thereby reducing the risk of supply chain disruptions due to factors such as natural disasters,
-       geopolitical issues, or supplier insolvency.<br>
-  
-<mark><br>(Enhanced Supplier Relationships)</mark>: Building strong relationships with suppliers through clear communication, fair dealings, 
-       and collaboration can lead to preferential treatment, better service levels, and access to innovations and expertise.<br>
-  
-<mark><br>(Increased Efficiency)</mark>: Streamlining procurement processes, implementing automation, and leveraging technology solutions such as e-procurement platforms can improve efficiency, 
-      reduce administrative burden, and free up resources for strategic activities.<br>
-</div>
+ </body>
 
-
-
-  <footer>
-    <div class="social-media">
-      <p>&copy; 2024 SUPPLY MANAGEMENT. All rights reserved.</p> 
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="index.html" class="btn-light nav-link px-2 text-body-secondary"><i class="fas fa-home"></i> Home</a></li>
+        <li class="nav-item"><a href="Supply Section.html" class="btn-light nav-link px-2 text-body-secondary"><i class="bi bi-table"></i> Supply Section</a></li>
+        <li class="nav-item"><a href="About.html" class="btn-light nav-link px-2 text-body-secondary"><i class="bi bi-person-lines-fill"></i> About</a></li>
+        <li class="nav-item"><a href="https://www.facebook.com/PLSPOfficialFBPage" class="btn-light nav-link px-2 text-body-secondary"><i class="bi bi-facebook"></i> PLSP</a></li>
+      </ul>
+      <p class="text-center text-body-secondary">© 2024 Supply Management Company, Inc</p>
+    </footer>
   </div>
 </footer>
+
 <!-- Bootstrap JS for some elements, slideshow and nav bar -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

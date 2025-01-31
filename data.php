@@ -4,61 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RECORDED DATA</title>
-    <link rel="stylesheet" href="datastyle.css"> <!-- Link your CSS file -->
+    <link rel="stylesheet" href="datastyle.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    
     <style>
-        .parent-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .button-container {
-            position: fixed;
-            display: flex;
-            bottom: 20px;
-            left: 20px;
-        }
-
-        .button-container button {
-            margin: 5px;
-            margin-top: 50px;
-        }
-
-        .button-back {
-    position: fixed;
-    bottom: 20px; /* Adjust this value as needed */
-    right: 5px; /* Adjust this value as needed */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
-        .container {
-            margin-bottom: 20px;
-            width: 800px;
-            overflow: hidden;
-    position: relative;
-    top: 80px; /* Adjust as needed */
-        }
+.bg-image {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: -1;
+    filter: blur(8px);
+}
+
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.button-container {
+    position: fixed;
+    display: flex;
+    bottom: 20px;
+    left: 20px;
+}
+
+.button-container button {
+      margin: 5px;
+}
+
+.button-back {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+.container {
+  background-color: #ccc;
+    border: 1px solid #000;
+    width: calc(100% - 30px); 
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 600px) {
+    .background {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .button-container {
+        bottom: 10px;
+        left: 10px;
+        flex-direction: column; 
+    }
+
+    .button-back {
+        bottom: 10px;
+        right: 10px;
+    }
+
+.container {
+    background-color: #ccc;
+    border: 2px solid #000;
+    width: calc(50% - 20px);
+    padding: 20px;
+    margin: 10px auto 20px auto; 
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    text-align: center; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto; 
+}
+
+th,
+td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px; 
+    }
+
+    th,
+    td {
+        padding: 4px; 
+    }
+}
+
     </style>
 </head>
 <body>
+
+ <img src="warehouse.jpg" alt="warehouse" class="bg-image">
+
     <div class="background"></div>
     <p></p>
 <div class="parent-container">
 
     <?php
     $servername = "localhost";
-    $username = "group8";
+    $username = "Group8";
     $password = "";
-    $database = "group8";
+    $database = "if0_36660578_smplsp";
+    
 
-    // Create connection
+  
     $conn = new mysqli($servername, $username, $password, $database);
 
-    // Check connection
+
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Fetch data from supply_section table
+    
     $sql = "SELECT * FROM supply_section";
     $result = $conn->query($sql);
 
@@ -171,10 +278,11 @@
     ?>
 
     <div class="button-container">
-        <button id="backButton" disabled>Back</button>
-        <button id="nextButton">Next</button>
+        <button id="backButton" class="btn btn-outline-dark" disabled> <i class="bi bi-caret-left-square-fill"></i> Back</button>
+        <button id="nextButton" class="btn btn-outline-primary">Next <i class="bi bi-caret-right-square-fill"></i></button>
         <div class= "button-back">
-        <button onclick="goToIndex()">Go back to Supply Section</button>
+        <button class="btn btn-outline-danger" onclick="goToIndex()">Go back to Supply Section <i class="bi bi-caret-down-square-fill"></i></button>
+
 </div>
     </div>
 </div>
@@ -234,4 +342,8 @@ function goToIndex() {
 }
 </script>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </html>

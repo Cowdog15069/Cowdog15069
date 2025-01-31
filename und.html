@@ -6,20 +6,22 @@
     <title>Supply Management System</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="logo" alt="Logo.img"></a>
     <a class="navbar-brand" href="#"></a>
-
+   
     </div>
 </nav>
-
+<div class="fade-in">
 <div class="container">
-    <h1>UPDATE</h1>
-    <form id="update-form" action="https://localhost/project/update.php" method="post">
+    <h1><i class="bi bi-database-fill-add"></i> UPDATE</h1>
+    <form id="update-form" action="update.php" method="post">
         <label for="update-section">Section:</label>
         <select id="update-section" name="sections" required>
             <option value="" disabled selected>Please Select a Section.</option>
@@ -78,73 +80,85 @@
             <input type="text" id="subject" name="subject">
         </div>
 
-        <button type="submit">CONFIRM</button>
+        <button type="submit" class="btn btn-outline-info" > <i class="bi bi-plus-circle"></i>
+            UPDATE</button>
         <input type="hidden" name="submit" required>
     </form>
 </div>
+<div class="fade-in">
+    <div class="container">
+        <h1><i class="bi bi-database-fill-x"></i> DELETE</h1>
+        <form id="delete-form" action="delete.php" method="post" onsubmit="return confirmDelete()">
+            <label for="delete-section">Section:</label>
+            <select id="delete-section" name="sections" required>
+                <option value="" disabled selected>Please Select a Section.</option>
+                <option value="ss">Supply Section</option>
+                <option value="um">University Material</option>
+                <option value="pps">Printer/Photocopies Section</option>
+                <option value="ls">Library Section</option>
+            </select>
 
+            <label for="product.no">Product_Number:</label>
+            <input type="number" id="product_num" name="product_num" maxlength="10" required>
+
+            <label for="delete-department">Department:</label>
+            <select id="delete-department" name="department" required>
+                <option value="" disabled selected>Please Select a Department.</option>
+                <option value="CAS">CAS</option>
+                <option value="CAHS">CAHS</option>
+                <option value="CBA">CBA</option>
+                <option value="CCST">CCST</option>
+                <option value="CHK">CHK</option>
+                <option value="COA">COA</option>
+                <option value="COE">COE</option>
+                <option value="CTE">CTE</option>
+                <option value="CTHM">CTHM</option>
+                <option value="GRADUATE SCHOOL">GRADUATE SCHOOL</option>
+                <option value="ACADEMIC AFFAIR OFFICE">ACADEMIC AFFAIR OFFICE</option>
+                <option value="ADMISSION OFFICE">ADMISSION OFFICE</option>
+                <option value="CANTEEN">CANTEEN</option>
+                <option value="CLINIC">CLINIC</option>
+                <option value="DMST OFFICE">DMST OFFICE</option>
+                <option value="FINANCE OFFICE">FINANCE OFFICE</option>
+                <option value="GUIDANCE OFFICE">GUIDANCE OFFICE</option>
+                <option value="MIS OFFICE">MIS OFFICE</option>
+                <option value="NSTP OFFICE">NSTP OFFICE</option>
+                <option value="PRESIDENT'S OFFICE">PRESIDENT'S OFFICE</option>
+                <option value="REGISTRAR'S OFFICE">REGISTRAR'S OFFICE</option>
+                <option value="STUDENT AFFAIRS OFFICE">STUDENT AFFAIRS OFFICE</option>
+                <option value="VICE PRESIDENT'S OFFICE">VICE PRESIDENT'S OFFICE</option>
+            </select>
+
+            <p></p>
+
+            <div id="delete-subjectField" style="display: none;">
+                <label for="subject">Subject (only for Library Section)</label>
+                <input type="text" id="subject" name="subject">
+            </div>
+            
+            <!-- Checkbox to delete all data in the supplies table -->
+            <input type="checkbox" id="delete-all-supplies" name="delete_all_supplies" onchange="toggleInputFields()">
+            <label for="delete-all-supplies">Delete all data in the supplies table</label>
+
+            <button type="submit" class="btn btn-outline-warning"><i class="bi bi-trash3-fill"></i>
+                DELETE</button>
+            <input type="hidden" name="submit" required>
+        </form>
+    </div>
+</div>
+
+</div>
 <div class="container">
-    <h1>DELETE</h1>
-    <form id="delete-form" action="https://localhost/project/delete.php" method="post">
-        <label for="delete-section">Section:</label>
-        <select id="delete-section" name="sections" required>
-            <option value="" disabled selected>Please Select a Section.</option>
-            <option value="ss">Supply Section</option>
-            <option value="um">University Material</option>
-            <option value="pps">Printer/Photocopies Section</option>
-            <option value="ls">Library Section</option>
-        </select>
-
-        <label for="product.no">Product_Number:</label>
-        <input type="number" id="product_num" name="product_num" maxlength="10" required>
-
-        <label for="delete-department">Department:</label>
-        <select id="delete-department" name="department" required>
-            <option value="" disabled selected>Please Select a Department.</option>
-            <option value="CAS">CAS</option>
-            <option value="CAHS">CAHS</option>
-            <option value="CBA">CBA</option>
-            <option value="CCST">CCST</option>
-            <option value="CHK">CHK</option>
-            <option value="COA">COA</option>
-            <option value="COE">COE</option>
-            <option value="CTE">CTE</option>
-            <option value="CTHM">CTHM</option>
-            <option value="GRADUATE SCHOOL">GRADUATE SCHOOL</option>
-            <option value="ACADEMIC AFFAIR OFFICE">ACADEMIC AFFAIR OFFICE</option>
-            <option value="ADMISSION OFFICE">ADMISSION OFFICE</option>
-            <option value="CANTEEN">CANTEEN</option>
-            <option value="CLINIC">CLINIC</option>
-            <option value="DMST OFFICE">DMST OFFICE</option>
-            <option value="FINANCE OFFICE">FINANCE OFFICE</option>
-            <option value="GUIDANCE OFFICE">GUIDANCE OFFICE</option>
-            <option value="MIS OFFICE">MIS OFFICE</option>
-            <option value="NSTP OFFICE">NSTP OFFICE</option>
-            <option value="PRESIDENT'S OFFICE">PRESIDENT'S OFFICE</option>
-            <option value="REGISTRAR'S OFFICE">REGISTRAR'S OFFICE</option>
-            <option value="STUDENT AFFAIRS OFFICE">STUDENT AFFAIRS OFFICE</option>
-            <option value="VICE PRESIDENT'S OFFICE">VICE PRESIDENT'S OFFICE</option>
-        </select>
-
-        <p></p>
-
-        <div id="delete-subjectField" style="display: none;">
-            <label for="subject">Subject (only for Library Section)</label>
-            <input type="text" id="subject" name="subject">
-        </div>
-
-        <button type="submit">CONFIRM</button>
-        <input type="hidden" name="submit" required>
-    </form>
+<div class="fade-in">
+<button class="btn btn-danger w-80 " type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"> <i class="bi bi-back"></i>
+    EXIT/Check Data </button>
+</div>
 </div>
 
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-    EXIT
-   </button>
-   
    <div class="offcanvas offcanvas-start text-bg-dark" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
      <div class="offcanvas-header">
-       <h5 class="offcanvas-title" id="staticBackdropLabel">UPDATE/DELETE</h5>
+       <h5 class="offcanvas-title" id="staticBackdropLabel"> <i class="bi bi-plus-circle"></i> <i class="bi bi-trash3-fill"></i>
+        UPDATE/DELETE </h5>
        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
      </div>
      <div class="offcanvas-body">
@@ -152,22 +166,20 @@
        </div>
        <div class="dropdown mt-3">
          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-           Dropdown button
+        <span class="dropdown-toggle-text"> </span>
          </button>
-         <ul class="dropdown-menu">
-           <li><a class="dropdown-item" href="Supply Section.html">Go back</a></li>
+
+        <ul class="dropdown-menu">
+           <li><a class="btn btn-primary dropdown-item" href="data.php"> <i class="bi bi-back"></i>
+            Check Data</a></li>
+            
+           <li><a class="btn btn-danger dropdown-item" href="Supply Section.html"> <i class="bi bi-back"></i>
+            Go back</a></li>
          </ul>
        </div>
      </div>
    </div>
 
-<footer>
-    <div class="social-media" id="contacts">
-        <a href="https://www.facebook.com/09772873415KIRITO" target="_blank"><img src="https://img.icons8.com/?size=50&id=118467&format=png" alt="Facebook"></a>
-        <p>&copy; 2024 SUPPLY MANAGEMENT. All rights reserved.</p> 
-        <p>Contact us: supplymanagement15069@gmail.com</p>
-    </div>
-</footer>
 
 <script>
     function toggleSubject(form, prefix) {
@@ -214,6 +226,33 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script>
+    function confirmDelete() {
+        // Check if the checkbox to delete all data in supplies table is checked
+        if (document.getElementById('delete-all-supplies').checked) {
+            // Show confirmation dialog
+            var confirmation = confirm("Are you sure you want to delete all data in the supplies table?");
+            return confirmation; // Allow form submission only if user confirms
+        }
+        return true; // Allow form submission if checkbox is not checked
+    }
+
+    function toggleInputFields() {
+        // Check if the checkbox to delete all data in supplies table is checked
+        var isChecked = document.getElementById('delete-all-supplies').checked;
+        var inputs = document.querySelectorAll('#delete-form input[type="text"], #delete-form select');
+
+        // Enable/disable all input fields based on the checkbox
+        inputs.forEach(function(input) {
+            input.disabled = isChecked;
+            if (isChecked) {
+                input.removeAttribute('required');
+            } else {
+                input.setAttribute('required', 'required');
+            }
+        });
+    }
+</script>
 
 
 </body>
